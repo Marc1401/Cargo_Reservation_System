@@ -40,7 +40,7 @@ The system is built for extensibility, enabling future integration with dashboar
 ### 1. Clone the repository
 
 bash
-git clone https://github.com/Marc1401/cargo-reservation-system.git
+git clone https://github.com/Marc1401/cargo-reservation-system.git <br>
 cd cargo-reservation-system
 
 
