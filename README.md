@@ -23,8 +23,23 @@ The **Cargo Reservation System** is a backend web application designed to manage
 It provides a scalable foundation for handling CRUD operations via REST APIs, supporting both single and bulk data creation.  
 The system is built for extensibility, enabling future integration with dashboards and analytics tools to monitor reservations and customers in real-time.
 
+## 🚀 Roadmap
+
+- **Phase 1: Customer CRUD + bulk insertion (✅ Done)**
+
+- **Phase 2: Flight entity & reservations**
+
+- **Phase 3: Booking system**
+
+- **Phase 4: Authentication & roles**
+
+- **Phase 5: Version control & GitHub setup (✅ This phase)**
+
+- **Phase 6: Frontend dashboard & analytics**
+
 
 ## 🛠️ Technologies Used
+- **Eclipse Version: 1,103.2 user setup**
 - **Java 17** – Core programming language  
 - **Spring Boot 3** – Backend framework (REST APIs, dependency injection, JPA)  
 - **Spring Data JPA (Hibernate)** – ORM for database access  
@@ -44,16 +59,45 @@ git clone https://github.com/Marc1401/cargo-reservation-system.git <br>
 cd cargo-reservation-system
 
 
-## 🚀 Roadmap
+## Configuraion
 
-- **Phase 1: Customer CRUD + bulk insertion (✅ Done)**
+Step 1: Install the required technlogies used
 
-- **Phase 2: Flight entity & reservations**
+- Verify the configuration PATH environment variable for Maven in the terminal: mvn -v
+- In the command prompt, create a database called "cargo_db": CREATE DATABASE cargo_db;
 
-- **Phase 3: Booking system**
+Step 2: Initialize Spring Boot Project
 
-- **Phase 4: Authentication & roles**
+1. Go to [Spring Initializr] (https://start.spring.io/)
+2. Configure:
+  - Project: **Maven**
+  - Language: **Java**
+  - Spring Boot: 3.5.6
+  - Dependencies: 
+     - Spring Web → to build REST APIs
+     - Spring Data JPA → to interact with the database
+     - PostgreSQL Dirver → to connect to PostgreSQL
+     - Validation → input validation
+     - Lombok → to reduce boilerplate code
+     - Spring Boot DevTools → for live reload during development
 
-- **Phase 5: Version control & GitHub setup (✅ This phase)**
+3. Click  **Generate** button to download the zip
+4. Extract the zip and open in Eclipse or your preferred IDE
 
-- **Phase 6: Frontend dashboard & analytics**
+Step 3: Configure Database Connection 
+
+1. From the zip file, open application properties from this path src/main/resources/application.properties
+
+2. Add to the file:
+    spring.datasource.url=jdbc:postgresql://localhost:5432/cargo_db
+    spring.datasource.username=your_username
+    spring.datasource.password=your_password
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+
+**Update your username and password**
+
+Step 4: Run Application
+
+- In the terminal, run : mvnw spring-boot:run
+
